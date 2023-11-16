@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&family=Roboto:ital,wght@0,900;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <title>Sign up for Travlr membership!</title>
+
+</head>
+<body>
+    <div id="wrapper">
+
+        <div id="container">
+
+            <div id="header">
+
+                <h1>Join the Travlr club now for you 15% discount!</h1>
+                <h2>Receive exclusive discounts straight away!</h2>
+                <p>BONUS: Get a further 20% discount on your first FULL package!</p>
+
+            </div><!-- End #header -->
+
+            <div id="form-container">
+
+                <form>
+                    <div class="row">
+                        <input type="text" id="name-input" name="name" 
+                        pattern="^\p{L}+\s+\p{L}+$"
+                        placeholder="Full Name" required>
+                        <input type="email" id="email-input" name="email" 
+                        pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                        placeholder="Email Address" required>
+                    </div>
+
+                    <div class="row">
+                        <input type="text" id="country-input" name="country" 
+                        minlength="2" placeholder="Country" required>
+                        <input type="text" id="postcode-input" name="postcode" 
+                        minlength="2" placeholder="Postcode" required>
+                    </div>
+
+                    <div class="row">
+                        <input type="password" id="password-input" name="password" 
+                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                        title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                        placeholder="Password" required>
+                        <input type="password" id="confirm-password-input" name="confirm" placeholder="Confirm Password" required>
+                    </div>
+
+                    <input type="submit" id="submit-button" value="Register">
+                    <p id="required">All fields are required!</p>
+                </form>
+
+                <div id="message">
+                    <h3>Password must contain the following:</h3>
+                    <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                    <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                    <p id="number" class="invalid">A <b>number</b></p>
+                    <p id="wordLength" class="invalid">Minimum <b>8 characters</b></p>
+                </div>
+
+            </div><!-- End #form-container -->
+
+            <div id="footer">
+
+                <p id="checkbox-text"><input type="checkbox"> I agree to the Travlr Terms and Conditions. <span>PLEASE CHECK THIS BOX!</span></p>
+
+                <p>By registering you agree to recieve recurring autmated marketing messages and scheduled payment reminders.<br>
+                You can opt out of recurring messages by texting STOP to our number<br>
+            Payments can only be withdrawn from by cancelling your subscription through your admin dashboard</p>
+
+            </div><!-- End #footer -->
+
+        </div><!-- End #container -->
+
+    </div><!-- End #wrapper -->
+    
+</body>
+</html>
